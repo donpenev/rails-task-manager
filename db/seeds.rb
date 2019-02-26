@@ -3,5 +3,6 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#
+# task = Task.create([{ title: 'Star Wars' }, { details: 'Lord of the Rings' }, { completed: true }])
+# Character.create(name: 'Luke', movie: movies.first)

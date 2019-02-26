@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<h1>My Tasks</h1>
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <div>
+      <input type="checkbox" id="<%=task.id%>" name="<%=task.title%>">
+      <label for="<%=task.title%>"></label>
+      <%= link_to task.title, task_path(task)%>
+      <%= link_to 'Delete' ,task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </li>
+<% end %>
+</ul>
+<%= link_to "new", new_path %>
+
